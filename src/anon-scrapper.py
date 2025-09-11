@@ -12,6 +12,7 @@ def get_driver():
     options = webdriver.ChromeOptions()
     options.add_argument("--no-sandbox")
     options.add_argument("--headless")
+    options.add_argument("--single-process")
 
     options.binary_location = "/opt/chrome/chrome-linux64/chrome"
 

@@ -20,7 +20,7 @@ export class InfraStack extends cdk.Stack {
           code: DockerImageCode.fromImageAsset("../src"),
           timeout: Duration.seconds(40),
           functionName: `selenium-function`,
-          memorySize: 128,
+          memorySize: 512,
           logRetention: RetentionDays.ONE_WEEK
         });
   }
