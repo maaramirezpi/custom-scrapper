@@ -36,11 +36,3 @@ for i in range(5):  # repeat 5 times
 
 driver.quit()
 
-#time.sleep(10)
-
-#story_tab2 = driver.find_element(By.CLASS_NAME, "profile__stories-counter")
-##stories2 = story_tab2.find_elements(By.TAG_NAME, "li")
-##stories_by_class2 = story_tab2.find_elements(By.CLASS_NAME,"profile__tabs-media-item")
-
-#print(story_tab2.text)
-
