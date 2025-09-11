@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import time
+from tempfile import mkdtemp
 import logging
 
 logger = logging.getLogger()
@@ -11,8 +12,12 @@ logger.setLevel(logging.INFO)
 def get_driver():
     options = webdriver.ChromeOptions()
     options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--headless")
     options.add_argument("--single-process")
+    options.add_argument(f"--user-data-dir={mkdtemp()}")
+    options.add_argument(f"--data-path={mkdtemp()}")
+    options.add_argument(f"--disk-cache-dir={mkdtemp()}")
 
     options.binary_location = "/opt/chrome/chrome-linux64/chrome"
 
