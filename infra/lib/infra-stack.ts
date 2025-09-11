@@ -18,9 +18,9 @@ export class InfraStack extends cdk.Stack {
     // });
     const lambdaFunction = new DockerImageFunction(this, `SeleniumLambda`, {
           code: DockerImageCode.fromImageAsset("../src"),
-          timeout: Duration.seconds(40),
+          timeout: Duration.seconds(60),
           functionName: `selenium-function`,
-          memorySize: 512,
+          memorySize: 1024,
           logRetention: RetentionDays.ONE_WEEK
         });
   }
