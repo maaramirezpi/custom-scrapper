@@ -30,7 +30,9 @@ driver.get("https://insta-stories-viewer.com/es/angeee.makeup/")
 
 for i in range(5):  # repeat 5 times
 	story_thingy = driver.find_element(By.CLASS_NAME, "profile__stories-counter")
+	profile_stats = driver.find_element(By.CLASS_NAME, "profile__stats")
 	print(f"Iteration {i+1} story count {story_thingy.text} --- am")
+	print(f"Iteration {i+1} profile stats {profile_stats.text} --- am")
 	# do something here
 	time.sleep(2)  # wait 3 seconds
 
