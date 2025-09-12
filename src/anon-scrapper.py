@@ -2,10 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from tempfile import mkdtemp
-import logging
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
 
 def get_default_chrome_options():
 	options = webdriver.ChromeOptions()
@@ -33,7 +30,7 @@ driver.get("https://insta-stories-viewer.com/es/angeee.makeup/")
 
 for i in range(5):  # repeat 5 times
 	story_thingy = driver.find_element(By.CLASS_NAME, "profile__stories-counter")
-	logger.info(f"Iteration {i+1} story count {story_thingy.text} --- am")
+	print(f"Iteration {i+1} story count {story_thingy.text} --- am")
 	# do something here
 	time.sleep(2)  # wait 3 seconds
 
