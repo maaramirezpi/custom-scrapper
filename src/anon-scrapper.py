@@ -8,7 +8,7 @@ def get_default_chrome_options():
 	options = webdriver.ChromeOptions()
 	options.add_argument("--no-sandbox")
 	options.add_argument("--disable-dev-shm-usage")
-	options.add_argument("--disable-dev-tools")
+	#options.add_argument("--disable-dev-tools")
 	options.add_argument("--no-zygote")
 	options.add_argument("--headless=new")
 	options.add_argument("--single-process")
