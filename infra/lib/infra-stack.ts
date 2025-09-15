@@ -26,8 +26,8 @@ export class InfraStack extends cdk.Stack {
 
       // Task Definition
       const taskDefinition = new ecs.FargateTaskDefinition(this, 'SeleniumTaskDef', {
-          memoryLimitMiB: 1024,
-          cpu: 512,
+          memoryLimitMiB: 512,
+          cpu: 256,
       });
 
       taskDefinition.addContainer('SeleniumContainer', {

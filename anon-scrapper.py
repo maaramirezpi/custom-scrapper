@@ -28,7 +28,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("https://insta-stories-viewer.com/es/angeee.makeup/")
 
 
-for i in range(5):  # repeat 5 times
+for i in range(10):  # repeat 5 times
 	story_thingy = driver.find_element(By.CLASS_NAME, "profile__stories-counter")
 	print(f"Iteration {i+1} story count {story_thingy.text} --- am")
 	# do something here
