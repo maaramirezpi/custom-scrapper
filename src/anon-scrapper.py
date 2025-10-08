@@ -25,7 +25,7 @@ def get_default_chrome_options():
 options = get_default_chrome_options()
 driver = webdriver.Chrome(options=options)
 
-driver.get("https://insta-stories-viewer.com/es/angeee.makeup/")
+driver.get("https://insta-stories-viewer.com/es//")
 
 
 for i in range(5):  # repeat 5 times
